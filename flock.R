@@ -5,7 +5,7 @@ library(tidyverse)
 # Interactive map
 
 flock_plot <- leaflet() %>%
-  addTiles() %>%  
+  addTiles() %>%
   addMarkers(lng = -78.49905, lat = 38.05269, popup = "Emmet St at Barracks Rd") %>%
   addMarkers(lng = -78.489840, lat = 38.056750, popup = "Rugby Rd at 250 Bypass") %>%
   addMarkers(lng = -78.47498, lat = 38.01602, popup = "Monticello Ave at Druid Ave") %>%
@@ -19,3 +19,4 @@ flock_plot <- leaflet() %>%
 
 
 flock_plot
+

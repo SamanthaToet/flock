@@ -1,0 +1,42 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+library(tidyverse)
+```
+
+# Here are the locations of every proposed Flock camera in Charlottesville
+
+Click on a pin to see more information:
+
+```{r plot, echo=FALSE}
+flock_plot <- leaflet(width = "100%") %>%
+  addTiles() %>%
+  addMarkers(lng = -78.49905, lat = 38.05269, popup = "Emmet St at Barracks Rd") %>%
+  addMarkers(lng = -78.489840, lat = 38.056750, popup = "Rugby Rd at 250 Bypass") %>%
+  addMarkers(lng = -78.47498, lat = 38.01602, popup = "Monticello Ave at Druid Ave") %>%
+  addMarkers(lng = -78.49550, lat = 38.03117, popup = "Roosevelt Brown Blvd at Lee St") %>%
+  addMarkers(lng = -78.494500, lat = 38.032530, popup = "West Main St at 10th St") %>%
+  addMarkers(lng = -78.50143, lat = 38.04247, popup = "University Ave at 14th St") %>%
+  addMarkers(lng = -78.48889, lat = 38.02586, popup = "Cherry Ave at Ridge St") %>%
+  addMarkers(lng = -78.48372, lat = 38.03369, popup = "Ridge McIntire at Preston Ave") %>%
+  addMarkers(lng = -78.49093, lat = 38.03867 , popup = "Preston Ave at Grady") %>%
+  addMarkers(lng = -78.459549, lat = 38.035011, popup = "Long St at Free Bridge") 
+
+flock_plot
+```
+
+On Monday, April 1, Chief Michael Kochis shared CPD's plan to install 10 Flock cameras around the city for a 1 year pilot program.
+
+Flock is an automated licence plate detection camera system that records every vehicle that passes and stores it for 7 days in a database accessible by any sworn Virginia police officer.
+
+See the proposal here: [Flock Safety Proposal - City Council Slide Deck](https://charlottesvilleva.portal.civicclerk.com/event/2105/files/attachment/4919)
+
+Learn more about Flock:
+
+-   [Wikipedia](%5Bhttps://en.wikipedia.org/wiki/Flock_Safety)
+
+-   [Whitepaper by the ACLU](https://www.aclu.org/wp-content/uploads/legal-documents/flock_1.pdf)
